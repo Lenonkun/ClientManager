@@ -26,6 +26,7 @@ class MainActivity : ComponentActivity() {
     }
 }
 
+
 @Composable
 fun ManagerClientsApp() {
     val navController: NavHostController = rememberNavController()
