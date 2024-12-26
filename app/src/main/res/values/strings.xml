@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Client Manager</string>
+    <string name="tab_clients">Клиенты</string>
+    <string name="tab_calendar">Календарь</string>
+    <string name="tab_home">Главная</string>
+    <string name="tab_resources_control">Контроль ресурсов</string>
+    <string name="tab_resources">Ресурсы</string>
+    <string name="add_client">Добавить клиента</string>
+</resources>
