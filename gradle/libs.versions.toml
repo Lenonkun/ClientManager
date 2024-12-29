@@ -1,37 +1,37 @@
 [versions]
+accompanist = "0.34.0"
+accompanist-coil = "0.15.0"
 agp = "8.7.3"
-androidRatingreviews = "1.2.0"
-kotlin = "2.0.0"
+androidx_navigation = "2.8.5"
+androidx-appcompat-version="1.7.0"
+activityCompose = "1.9.3"
+annotations = "23.0.0"
+androidx-recyclerview-version = "1.3.2"
 coreKtx = "1.15.0"
+compose="1.7.6"
+composeBom = "2024.12.01"
+espressoCore = "3.6.1"
+firebaseInappmessaging = "21.0.1"
+google-material-version ="1.12.0"
+hilt_compose = "1.2.0"
+hilt-android-version= "2.49"
+kotlin = "2.0.0"
+lifecycleRuntimeKtx = "2.8.7"
+material-v="1.7.6"
+material3 = "1.3.1"
+multidex-version = "2.0.1"
+navigationCompose = "2.8.5"
+playServicesDrive = "17.0.0"
+room-version = "2.6.1"
+room ="2.6.1"
+runtimeLivedata = "1.7.6"
 junit = "4.13.2"
 junitVersion = "1.2.1"
-espressoCore = "3.6.1"
-lifecycleRuntimeKtx = "2.8.7"
-activityCompose = "1.9.3"
-composeBom = "2024.12.01"
-androidx_navigation = "2.8.5"
-#androidx-core-version ="1.15.0"
-androidx-appcompat-version="1.7.0"
-google-material-version ="1.12.0"
-androidx-recyclerview-version = "1.3.2"
-room ="2.6.1"
-#androidx-room-compiler-version ="2.6.1"
-firebaseInappmessaging = "21.0.1"
-room-version = "2.6.1"
-navigationCompose = "2.8.5"
-runtimeLivedata = "1.7.6"
-hilt-android-version= "2.48.1"
-material-v3="1.3.1"
-material-v="1.7.6"
-compose="1.7.6"
 workManager = "2.10.0"
-accompanist = "0.34.0"
-playServicesDrive = "17.0.0"
-compose-material3= "1.6.7"
 
 
 [libraries]
-#android-ratingreviews = { module = "com.github.Inconnu08:android-ratingreviews", version.ref = "androidRatingreviews" }
+
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
 androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
@@ -48,31 +48,39 @@ androidx-ui-test-junit4 = { group = "androidx.compose.ui", name = "ui-test-junit
 androidx_navigation_fragment = { module = "androidx.navigation:navigation-fragment-ktx", version.ref = "androidx_navigation" }
 
 
-#androidx-core = { module = "androidx.core:core-ktx", version.ref = "androidx-core-version" }
+
 androidx-appcompat = { module = "androidx.appcompat:appcompat", version.ref = "androidx-appcompat-version" }
 google-material = { module = "com.google.android.material:material", version.ref = "google-material-version" }
 androidx-recyclerview = { module = "androidx.recyclerview:recyclerview", version.ref = "androidx-recyclerview-version" }
 androidx-room = { module = "androidx.room:room-runtime", version.ref = "room" }
 room-ktx = { module="androidx.room:room-ktx", version.ref="room"}
-#androidx-room-compiler = { module = "androidx.room:room-compiler", version.ref = "androidx-room-compiler-version" }
+
 room-compiler = {module = "androidx.room:room-compiler", version.ref = "room-version"}
 firebase-inappmessaging = { group = "com.google.firebase", name = "firebase-inappmessaging", version.ref = "firebaseInappmessaging" }
 androidx-navigation-compose = { group = "androidx.navigation", name = "navigation-compose", version.ref = "navigationCompose" }
 androidx-runtime-livedata = { group = "androidx.compose.runtime", name = "runtime-livedata", version.ref = "runtimeLivedata" }
+
 hilt-android = {module = "com.google.dagger:hilt-android", version.ref="hilt-android-version"}
 hilt-compiler = {module = "com.google.dagger:hilt-compiler", version.ref="hilt-android-version"}
 hilt-lifecycle = {module = "androidx.hilt:hilt-lifecycle-viewmodel", version="1.0.0-alpha03"}
-android-hilt-compiler = {module="androidx.hilt:hilt-compiler", version = "1.2.0"}
+hilt-navigation-compose = { module = "androidx.hilt:hilt-navigation-compose", version.ref = "hilt_compose" }
+hilt-android-compiler = { module = "com.google.dagger:hilt-android-compiler", version.ref = "hilt-android-version" }
 
-#material3 = {module="androidx.compose.material3:material3", version.ref="material-v3"}
-#compose-material3-icons = { module = "androidx.compose.material3:material3-icons-extended", version.ref = "compose-material3" }
-androidx-material3 = { group = "androidx.compose.material3", name = "material3" }
+
+#android-support-multidex = {module="com.android.support:multidex", version.ref= "multidex-version"}
+android-multidex={module="androidx.multidex:multidex", version.ref = "multidex-version"}
+
+
+androidx-material3 = { group = "androidx.compose.material3", name = "material3", version.ref ="material3"}
 material = {module="androidx.compose.material:material", version.ref="material-v"}
 
 work-runtime-ktx = {module="androidx.work:work-runtime-ktx",version.ref="workManager"}
 accompanist-systemuicontroller = { module = "com.google.accompanist:accompanist-systemuicontroller", version.ref = "accompanist" }
+accompanist-coil = { module = "com.google.accompanist:accompanist-coil", version.ref = "accompanist-coil" }
+io-coil = { module="io.coil-kt:coil-compose", version = "2.7.0"}
 play-services-drive = { group = "com.google.android.gms", name = "play-services-drive", version.ref = "playServicesDrive" }
 
+annotations = { group = "org.jetbrains", name = "annotations", version.ref = "annotations" }
 
 
 

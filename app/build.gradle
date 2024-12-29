@@ -8,6 +8,17 @@ android {
     namespace 'com.example.clientmanager'
     compileSdk 35
 
+    allprojects {
+        project.configurations.all {
+            resolutionStrategy {
+                eachDependency {
+                    if (requested.group == "com.intellij" && requested.name == "annotations") {
+                        useTarget("org.jetbrains:annotations:23.0.0")
+                    }
+                }
+            }
+        }
+    }
     defaultConfig {
         applicationId "com.example.clientmanager"
         minSdk 29
@@ -16,6 +27,7 @@ android {
         versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
     }
 
     buildTypes {
@@ -35,10 +47,17 @@ android {
     buildFeatures {
         compose true
     }
+
+    packaging {
+        resources {
+            excludes += ["META-INF/gradle/incremental.annotation.processors"]
+        }
+    }
+
 }
 
 dependencies {
-//    implementation (libs.android.ratingreviews) { exclude group: 'org.jetbrains', module: 'annotations-java5' }
+
     implementation libs.androidx.core.ktx
     implementation libs.androidx.lifecycle.runtime.ktx
     implementation libs.androidx.activity.compose
@@ -60,23 +79,27 @@ dependencies {
     debugImplementation libs.androidx.ui.test.manifest
     implementation libs.androidx.navigation.fragment
 
-//    implementation libs.androidx.core
+
     implementation libs.androidx.appcompat
     implementation libs.google.material
     implementation libs.androidx.recyclerview
     implementation libs.androidx.room
-//    annotationProcessor libs.androidx.room.compiler
+
     implementation libs.hilt.android
     implementation libs.room.compiler
-    implementation libs.hilt.compiler
+//    implementation libs.hilt.compiler
     implementation libs.hilt.lifecycle
-    implementation libs.android.hilt.compiler
+    implementation libs.hilt.navigation.compose
+    implementation libs.hilt.android.compiler
 
     implementation libs.material
-//    implementation libs.material3
     implementation libs.room.ktx
     implementation libs.work.runtime.ktx
     implementation libs.accompanist.systemuicontroller
-//    implementation libs.compose.material3.icons
-//    implementation libs.compose.material3.icons
+//    implementation libs.accompanist.coil
+    implementation libs.io.coil
+
+    compileOnly libs.android.multidex
+
+
 }
