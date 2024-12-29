@@ -4,7 +4,9 @@ import com.example.clientmanager.data.dao.SessionDao
 import com.example.clientmanager.data.entity.SessionEntity
 import javax.inject.Inject
 
-class SessionRepository @Inject constructor(private val sessionDao: SessionDao) {
+class SessionRepository @Inject constructor(
+    private val sessionDao: SessionDao
+) {
     suspend fun addSession(session: SessionEntity) = sessionDao.insertSession(session)
     suspend fun getSessionsByClient(clientId: Int) = sessionDao.getSessionsByClientId(clientId)
     suspend fun addPhotosToSession(sessionId: Int, photoUris: List<String>) {
